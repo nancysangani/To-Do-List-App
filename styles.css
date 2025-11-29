@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: mintcream;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 15px;
+  padding: 15px;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0.15px;
+}
+
+.main {
+  width: 70%;
+  background-color: darkolivegreen;
+  border-radius: 10px;
+  box-shadow: 0.25px 0.5px 4px black;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  padding: 20px 0;
+}
+
+li {
+  background-color: ivory;
+  width: 80%;
+  margin: 20px auto;
+  height: 75px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 15px;
+  box-shadow: 0.25px 0.5px 4px black;
+  font-size: 18px;
+  color: darkolivegreen;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button {
+  background-color: lightgreen;
+}
+
+.delete-button {
+  background-color: #f08080; /* light red */
+}
+
+.edit-button:hover {
+  background-color: #7ed957;
+}
+
+.delete-button:hover {
+  background-color: #f55a5a;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.cancel-button,
+.save-button {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(183, 243, 183);
+}
+
+.add-button {
+  display: block;
+  margin: 15px auto;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgb(183, 243, 183);
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: lightgreen;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(15, 99, 4, 0.827);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.task-name {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #0f5402;
+  background-color: #e9f6e7;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #0f5402;
+}
+
+.task-modal {
+  display: none;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0 20px;
+  border: 2px solid darkolivegreen;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(98, 244, 76, 0.5);
+  z-index: 1000;
+  animation: fade 0.3s ease-in-out;
+}
+
+.blur {
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

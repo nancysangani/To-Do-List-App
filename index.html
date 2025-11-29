@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled To-Do List</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="main">
+    <h1>My To-Do List</h1>
+
+    <ul class="todo-list"></ul>
+    <button class="add-button">Add New Task</button>
+  </div>
+
+  <div id="task-modal" class="task-modal">
+    <h3 class="modal-title">Add / Edit Task</h3>
+    <form id="task-form">
+      <input class="task-name" id="task-name" type="text" placeholder="Task Name" />
+
+      <div>
+        <button type="button" id="close-modal" aria-label="Cancel button" class="cancel-button">Cancel</button>
+        <button type="submit" aria-label="Button to save the details added in form" class="save-button">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
